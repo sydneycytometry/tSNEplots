@@ -40,7 +40,7 @@
   jet.colors <- colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"))
 
 
-##### STEP 2: USER INPUT #####
+##### STEP 2a: USER INPUT #####
   
   ## Set your working directory here (e.g. "/Users/Tom/Desktop/")
   setwd("/Users/Tom/Desktop/CSVfiles/") 
@@ -51,7 +51,7 @@
   ## Assign the working directory as 'PrimaryDirectory'
   PrimaryDirectory <- getwd()
   PrimaryDirectory
-
+  
   ## Create a list of file names (names of the samples) and check file names
   FileNames <- list.files(path=PrimaryDirectory, pattern = ".csv")
   FileNames
@@ -60,11 +60,26 @@
   names(read.csv("Sample1.csv"))
   
   ## IMPORTANT
-  ## The last user input required is on lines 88 and 89 --after "CurrentSampleCSV$" type in the name of your 'tSNE parameter, from above
+  ## The last user input required is on lines 103 and 104 --after "CurrentSampleCSV$" type in the name of your 'tSNE parameter, from above
   
+  
+##### STEP 2b: ESTABLISH GLOBAL SCALE LIMITS #####
+  ## Read all CSV files into a list
+  files  <- list.files(pattern = '\\.csv')
+  files
+  
+  ## Create a 'list' of the data from all CSV files
+  tables <- lapply(files, read.csv, header = TRUE)
+  tables
+  
+  ## Merge data into one large data frame. 
+  combined.df <- do.call(rbind , tables)
+  
+  ## The scale max and min will be global (i.e. will be the same for all samples, despite what the individual sample max or min is)
+
   
 ##### STEP 3: Loop with  samples in separate folders #####  
-  ## First, change the tSNE parameters (around lines 88 and 89)
+  ## First, change the tSNE parameters (on lines 103 and 104)
   ## Then run all of the script below
   
   ## Set wd
@@ -103,8 +118,8 @@
         aes(x = tSNE1, y = tSNE2)) +
         geom_point(size = 0.5, mapping=aes_string(color=i))+ # 2 for large # 0.5 for small
         scale_colour_gradientn(colours = jet.colors(50),
-                               limits = c(quantile(CurrentSampleCSV[[i]], probs = c(0.01)), #0.03-01 seems to work well
-                                          quantile(CurrentSampleCSV[[i]], probs = c(0.995))), #0.97-995 seems to work well
+                               limits = c(quantile(combined.df[[i]], probs = c(0.01)), #0.03-01 seems to work well
+                                          quantile(combined.df[[i]], probs = c(0.995))), #0.97-995 seems to work well
                                oob=squish) + 
         ggtitle(i) +
         # scale_x_continuous(limits = 40, -40)+ # use if necessary
