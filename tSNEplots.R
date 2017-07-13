@@ -1,6 +1,7 @@
 # Title: Looped R script for generating colourised tSNE plots
     # Author: Thomas Ashhurst 
-    # Published to github: 2017-04-28
+    # Originally published to github: 2017-04-28
+    # This version published to github: 2017-07-13
     # Contact: tomashhurst@gmail.com
     # Website: www.sydneycytometry.org.au
     # Github: www.github.com/sydneycytometry
@@ -14,6 +15,8 @@
     # colorRamps version  2.3
     # ggthemes version    3.4.0
     # scales version      0.4.1
+
+    # Updated on 2017-07-13 to include 'global scaling'
 
 
 ##### SUMMARY #####
