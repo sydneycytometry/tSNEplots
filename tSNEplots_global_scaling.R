@@ -63,7 +63,7 @@
   names(read.csv("Sample1.csv"))
   
   ## IMPORTANT
-  ## The last user input required is on lines 103 and 104 --after "CurrentSampleCSV$" type in the name of your 'tSNE parameter, from above
+  ## The last user input required is on lines 106 and 107 --after "CurrentSampleCSV$" type in the name of your 'tSNE parameter, from above
   
   
 ##### STEP 2b: ESTABLISH GLOBAL SCALE LIMITS #####
@@ -82,7 +82,7 @@
 
   
 ##### STEP 3: Loop with  samples in separate folders #####  
-  ## First, change the tSNE parameters (on lines 103 and 104)
+  ## First, change the tSNE parameters (on lines 106 and 107)
   ## Then run all of the script below
   
   ## Set wd
