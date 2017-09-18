@@ -18,9 +18,15 @@ If you use this script in your work, please cite this github. The current versio
 **In EndNote**
 Citaton can be stored as ‘Computer Program’ or ‘Webpage’.
 
-*Author =					                Ashhurst, Thomas Myles
-Year =						                2017
-Title =						                tSNEplots v1.1.0
-Journal = 				                GitHub repository
-Publisher = 			                Github
-Website (copy the whole line) = 	DOI: http://doi.org/10.5281/zenodo.851859, repository: https://github.com/sydneycytometry/tSNEplots*
+*Author =					                Ashhurst, Thomas Myles*
+
+*Year =						                2017*
+
+*Title =						              tSNEplots v1.1.0*
+
+*Journal = 				                GitHub repository*
+
+*Publisher = 			                Github*
+
+*Website (copy the whole line) = 	DOI: http://doi.org/10.5281/zenodo.851859, repository: https://github.com/sydneycytometry/tSNEplots*
+
