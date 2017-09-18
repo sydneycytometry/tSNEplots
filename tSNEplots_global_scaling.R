@@ -45,7 +45,7 @@
 ##### STEP 2a: USER INPUT #####
   
   ## Set your working directory here (e.g. "/Users/Tom/Desktop/")
-  setwd("/Users/Tom/Desktop/tSNEplots-master 2/Input/") 
+  setwd("/Users/Tom/Desktop/sample_data") 
 
   ## Check your working directory has changed correctly
   getwd() 
@@ -59,11 +59,11 @@
   FileNames
 
   ## Enter the name of your first sample in between the "", and to check the tSNE parameter names (could be bhSNE, bh.SNE, vSNE, tSNE, etc)
-  names(read.csv("All_files_35000_CCT_1_IFNAR KO_with_tSNE.csv"))
+  names(read.csv("sample_data.csv"))
   
   ## In the output of the previous line, you will see the names for the tSNE parameters -- insert them in between the "" below
-  tSNE1name <- "tSNE_X_P_30_E_200_I_1000_T_0.5"
-  tSNE2name <- "tSNE_Y_P_30_E_200_I_1000_T_0.5"
+  tSNE1name <- "tSNE1"
+  tSNE2name <- "tSNE2"
 
   
 ########### END USER INPUT ########### 
