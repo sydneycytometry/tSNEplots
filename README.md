@@ -5,12 +5,13 @@ There are two versions of this script. In the main script (tSNEplots.R), the col
 
 This script accepts .csv files as input. A version to read straight from .fcs files will follow soon.
 
+
 **Citation**
 If you use this script in your work, please cite this github.
 
 Current version (v1.2.0):
 
-> Ashhurst, T. M. (2017). tSNEplots v1.2.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.893859, repository: https://github.com/sydneycytometry/tSNEplots.
+*Ashhurst, T. M. (2017). tSNEplots v1.2.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.893859, repository: https://github.com/sydneycytometry/tSNEplots.*
 
 If you need to put it into EndNote, you can store it as ‘Computer Program’ or ‘Webpage’.
 
