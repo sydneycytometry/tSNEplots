@@ -1,7 +1,7 @@
 # Title: Looped R script for generating colourised tSNE plots
     # Author: Thomas Ashhurst 
     # Originally published to github: 2017-04-28
-    # This version published to github: 2017-07-13
+    # This version published to github: 2017-09-18
     # Contact: tomashhurst@gmail.com
     # Website: www.sydneycytometry.org.au
     # Github: www.github.com/sydneycytometry
@@ -16,8 +16,7 @@
     # ggthemes version    3.4.0
     # scales version      0.4.1
 
-    # Updated on 2017-07-13 to include 'global scaling'
-
+    # Updated on 2017-07-13 to include 'global scaling', and on 2017-09-18 to include global XY scaling
 
 ##### SUMMARY #####
   # Step 1: Run section by section - load relevant packages, and setup for the script
@@ -46,7 +45,7 @@
 ##### STEP 2a: USER INPUT #####
   
   ## Set your working directory here (e.g. "/Users/Tom/Desktop/")
-  setwd("/Users/Tom/Desktop/CSVfiles/") 
+  setwd("/Users/Tom/Desktop/tSNEplots-master 2/Input/") 
 
   ## Check your working directory has changed correctly
   getwd() 
@@ -60,29 +59,41 @@
   FileNames
 
   ## Enter the name of your first sample in between the "", and to check the tSNE parameter names (could be bhSNE, bh.SNE, vSNE, tSNE, etc)
-  names(read.csv("Sample1.csv"))
+  names(read.csv("All_files_35000_CCT_1_IFNAR KO_with_tSNE.csv"))
   
-  ## IMPORTANT
-  ## The last user input required is on lines 106 and 107 --after "CurrentSampleCSV$" type in the name of your 'tSNE parameter, from above
-  
-  
-##### STEP 2b: ESTABLISH GLOBAL SCALE LIMITS #####
-  ## Read all CSV files into a list
-  files  <- list.files(pattern = '\\.csv')
-  files
-  
-  ## Create a 'list' of the data from all CSV files
-  tables <- lapply(files, read.csv, header = TRUE)
-  tables
-  
-  ## Merge data into one large data frame. 
-  combined.df <- do.call(rbind , tables)
-  
-  ## The scale max and min will be global (i.e. will be the same for all samples, despite what the individual sample max or min is)
+  ## In the output of the previous line, you will see the names for the tSNE parameters -- insert them in between the "" below
+  tSNE1name <- "tSNE_X_P_30_E_200_I_1000_T_0.5"
+  tSNE2name <- "tSNE_Y_P_30_E_200_I_1000_T_0.5"
 
   
+########### END USER INPUT ########### 
+  
+  
+##### STEP 2b: ESTABLISH GLOBAL SCALE LIMITS FOR COLOUR and XY #####
+  ## Read all CSV files into a list
+  files  <- list.files(pattern = '\\.csv')
+  
+  ## Create a 'list' of the data from all CSV files, then combine data into one large dataframe
+  tables <- lapply(files, read.csv, header = TRUE)
+  combined.df <- do.call(rbind , tables) 
+
+  ## Find column names for whole dataset
+  names(combined.df)
+  
+  ## find maximum and minimum tSNE-X value --> define these
+  Xmax <- max(combined.df[[tSNE1name]]) # double check function
+  Ymax <- max(combined.df[[tSNE2name]])
+
+  ## find maximum and minimum tSNE-Y value --> define these
+  Xmin <- min(combined.df[[tSNE1name]]) # double check function
+  Ymin <- min(combined.df[[tSNE2name]])
+  
+  # Using STEP 2b, the colour scale max and min will be the same for all samples, despite what the individual sample max or min is
+  # Also using STEP2b, the X and Y limits will be the same for all samples, despite what the individual sample max or min is
+  
+  
 ##### STEP 3: Loop with  samples in separate folders #####  
-  ## First, change the tSNE parameters (on lines 106 and 107)
+  ## First, change the tSNE parameters (on lines 103 and 104)
   ## Then run all of the script below
   
   ## Set wd
@@ -102,9 +113,9 @@
     File <- gsub(" ", "_", File) # replaces empty spaces in the file name with '_'
     File <- gsub(".csv", "", File) # removes ".csv" from the file name 
     
-    ## After the '$', define the tSNE parameter names (as they appear in the CSV files) for tSNE1 (x-axis) and tSNE2 (y-axis)
-    tSNE1 <- CurrentSampleCSV$tSNE1 # defines the tSNE1 (x-axis) parameter name from your file
-    tSNE2 <- CurrentSampleCSV$tSNE2 # defines the tSNE2 (y-axis) parameter name from your file
+    ## Defines the 'tSNE' parameters that will be used to set the X and y axis
+    tSNE1 <- CurrentSampleCSV[[tSNE1name]] # defines the tSNE1 (x-axis) parameter name from your file
+    tSNE2 <- CurrentSampleCSV[[tSNE2name]] # defines the tSNE2 (y-axis) parameter name from your file
     
     ## Create subdirectory
     setwd("Output(subfolders)") 
@@ -125,8 +136,8 @@
                                           quantile(combined.df[[i]], probs = c(0.995))), #0.97-995 seems to work well
                                oob=squish) + 
         ggtitle(i) +
-        # scale_x_continuous(limits = 40, -40)+ # use if necessary
-        # scale_y_continuous(limits = 40, -40)+ # use if necessary
+        xlim(Xmin, Xmax)+
+        ylim(Ymin, Ymax)+
         # xlab("tSNE1") + # use if desired, must also change theme settings below
         # ylab("tSNE2") + # use if desired, must also change theme settings below
         theme( # panel.background = element_rect(fill = "white", colour = "white", size = 0.5), # change 'colour' to black for informative axis
