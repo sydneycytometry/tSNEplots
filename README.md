@@ -1,21 +1,19 @@
 # tSNEplots
-## Description ##
+### Description ###
 An R script for automatically creating coloured tSNE plots. Follow the instructions within the R script to execute.
 
 There are two versions of this script. In the main script (tSNEplots.R), the colour scale for each sample is handled independently. In the new script (tSNEplots_global_scaling.R) the colour, X, and Y scales are 'global', so for any given marker the maximum and minimum will be the same between samples.
 
 This script accepts .csv files as input. A version to read straight from .fcs files will follow soon.
 
+## How to download ##
+Go to 'releases' above and download the latest version. 
+
 ## Version history ##
 v1.1.0 - original script
 v1.2.0 - updated to include 'global' colour, X, and Y scaling
 
-## How to download ##
-
-Go to 'releases' above and download the latest version. 
-
 ## Citation ##
-
 If you use this script in your work, please cite this github using the information below. You can cite the specific version that you used in your work (most recent version = v1.2.0).
 
 **Cite as:**
