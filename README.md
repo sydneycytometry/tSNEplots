@@ -7,7 +7,7 @@ There are two versions of this script. In the main script (tSNEplots.R), the col
 This script accepts .csv files as input. A version to read straight from .fcs files will follow soon.
 
 ## How to download ##
-Go to 'releases' above and download the latest version. 
+Go to 'releases' above (https://github.com/sydneycytometry/tSNEplots/releases) and download the latest version. 
 
 ## Version history ##
 v1.1.0 - original script
