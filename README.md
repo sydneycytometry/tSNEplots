@@ -14,16 +14,16 @@ If you use this script in your work, please cite this github using the informati
 
 
 ### Version history ###
-v1.2.0 - updated to include 'global' colour, X, and Y scaling (most recent)
+**v1.2.0** - updated to include 'global' colour, X, and Y scaling (most recent)
 
 *Ashhurst, T. M. (2017). tSNEplots v1.2.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.893859, repository: https://github.com/sydneycytometry/tSNEplots.*
 
-v1.1.0 - original script
+**v1.1.0** - original script
 
 *Ashhurst, T. M. (2017). tSNEplots v1.1.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.851736, repository: https://github.com/sydneycytometry/tSNEplots.*
 
 
-**Cite as:**
+### Citation details ###
 
 *Ashhurst, T. M. (2017). tSNEplots v1.2.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.893859, repository: https://github.com/sydneycytometry/tSNEplots.*
 
