@@ -6,10 +6,17 @@ There are two versions of this script. In the main script (tSNEplots.R), the col
 
 This script accepts .csv files as input. A version to read straight from .fcs files will follow soon.
 
+## Version history ##
+v1.1.0 - original script
+v1.2.0 - updated to include 'global' colour, X, and Y scaling
+
+## How to download ##
+
+Go to 'releases' above and download the latest version. 
 
 ## Citation ##
 
-If you use this script in your work, please cite this github. The current version is v1.2.0.
+If you use this script in your work, please cite this github using the information below. You can cite the specific version that you used in your work (most recent version = v1.2.0).
 
 **Cite as:**
 
