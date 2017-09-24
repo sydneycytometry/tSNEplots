@@ -14,6 +14,7 @@ If you use this script in your work, please cite this github using the informati
 
 
 ### Version history ###
+
 **v1.2.0** - updated to include 'global' colour, X, and Y scaling (most recent)
 
 *Ashhurst, T. M. (2017). tSNEplots v1.2.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.893859, repository: https://github.com/sydneycytometry/tSNEplots.*
@@ -23,9 +24,8 @@ If you use this script in your work, please cite this github using the informati
 *Ashhurst, T. M. (2017). tSNEplots v1.1.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.851736, repository: https://github.com/sydneycytometry/tSNEplots.*
 
 
-### Citation details ###
+### Citation in EndNote ###
 
-*Ashhurst, T. M. (2017). tSNEplots v1.2.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.893859, repository: https://github.com/sydneycytometry/tSNEplots.*
 
 **In EndNote:** citaton can be stored as ‘Computer Program’ or ‘Webpage’.
 
@@ -33,11 +33,11 @@ If you use this script in your work, please cite this github using the informati
 
 *Year =						                2017*
 
-*Title =						              tSNEplots v1.1.0*
+*Title =						              tSNEplots v1.2.0*
 
 *Journal = 				                GitHub repository*
 
 *Publisher = 			                Github*
 
-*Website (copy the whole line) = 	DOI: http://doi.org/10.5281/zenodo.851859, repository: https://github.com/sydneycytometry/tSNEplots*
+*Website (copy the whole line) = 	DOI: http://doi.org/10.5281/zenodo.893859, repository: https://github.com/sydneycytometry/tSNEplots*
 
