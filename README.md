@@ -7,14 +7,21 @@ There are two versions of this script. In the main script (tSNEplots.R), the col
 This script accepts .csv files as input. A version to read straight from .fcs files will follow soon.
 
 ### How to download ###
-Go to 'releases' above (https://github.com/sydneycytometry/tSNEplots/releases) and download the latest version. 
-
-### Version history ###
-v1.1.0 - original script
-v1.2.0 - updated to include 'global' colour, X, and Y scaling
+Go to 'releases' above (https://github.com/sydneycytometry/tSNEplots/releases) and download source code for the latest version. 
 
 ### Citation ###
 If you use this script in your work, please cite this github using the information below. You can cite the specific version that you used in your work (most recent version = v1.2.0).
+
+
+### Version history ###
+v1.2.0 - updated to include 'global' colour, X, and Y scaling (most recent)
+
+*Ashhurst, T. M. (2017). tSNEplots v1.2.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.893859, repository: https://github.com/sydneycytometry/tSNEplots.*
+
+v1.1.0 - original script
+
+*Ashhurst, T. M. (2017). tSNEplots v1.1.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.851736, repository: https://github.com/sydneycytometry/tSNEplots.*
+
 
 **Cite as:**
 
