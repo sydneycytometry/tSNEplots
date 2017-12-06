@@ -62,8 +62,8 @@
   names(read.csv("sample_data.csv"))
   
   ## In the output of the previous line, you will see the names for the tSNE parameters -- insert them in between the "" below
-  tSNE1name <- "tSNE1"
-  tSNE2name <- "tSNE2"
+  plotXname <- "tSNE1"
+  plotYname <- "tSNE2"
 
   
 ########### END USER INPUT ########### 
@@ -81,12 +81,12 @@
   names(combined.df)
   
   ## find maximum and minimum tSNE-X value --> define these
-  Xmax <- max(combined.df[[tSNE1name]]) # double check function
-  Ymax <- max(combined.df[[tSNE2name]])
+  Xmax <- max(combined.df[[plotXname]]) # double check function
+  Ymax <- max(combined.df[[plotYname]])
 
   ## find maximum and minimum tSNE-Y value --> define these
-  Xmin <- min(combined.df[[tSNE1name]]) # double check function
-  Ymin <- min(combined.df[[tSNE2name]])
+  Xmin <- min(combined.df[[plotXname]]) # double check function
+  Ymin <- min(combined.df[[plotYname]])
   
   # Using STEP 2b, the colour scale max and min will be the same for all samples, despite what the individual sample max or min is
   # Also using STEP2b, the X and Y limits will be the same for all samples, despite what the individual sample max or min is
@@ -114,8 +114,8 @@
     File <- gsub(".csv", "", File) # removes ".csv" from the file name 
     
     ## Defines the 'tSNE' parameters that will be used to set the X and y axis
-    tSNE1 <- CurrentSampleCSV[[tSNE1name]] # defines the tSNE1 (x-axis) parameter name from your file
-    tSNE2 <- CurrentSampleCSV[[tSNE2name]] # defines the tSNE2 (y-axis) parameter name from your file
+    plotX <- CurrentSampleCSV[[plotXname]] # defines the tSNE1 (x-axis) parameter name from your file
+    plotY <- CurrentSampleCSV[[plotYname]] # defines the tSNE2 (y-axis) parameter name from your file
     
     ## Create subdirectory
     setwd("Output(subfolders)") 
@@ -129,7 +129,7 @@
 
       tSNEplotLoop <- ggplot(
         data = `CurrentSampleCSV`,
-        aes(x = tSNE1, y = tSNE2)) +
+        aes(x = plotX, y = plotY)) +
         geom_point(size = 0.5, mapping=aes_string(color=i))+ # 2 for large # 0.5 for small
         scale_colour_gradientn(colours = jet.colors(50),
                                limits = c(quantile(combined.df[[i]], probs = c(0.01)), #0.03-01 seems to work well
