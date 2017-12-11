@@ -109,6 +109,8 @@
     CurrentSampleCSV <- read.csv(File)
     CurrentSampleCSV
     
+    CurrentSampleCSV <- CurrentSampleCSV[ , colSums(is.na(CurrentSampleCSV)) == 0] # removes any columns containing 'NA's 
+      
     # Modifications to the name are made here
     File <- gsub(" ", "_", File) # replaces empty spaces in the file name with '_'
     File <- gsub(".csv", "", File) # removes ".csv" from the file name 
