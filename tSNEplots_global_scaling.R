@@ -75,7 +75,10 @@
   
   ## Create a 'list' of the data from all CSV files, then combine data into one large dataframe
   tables <- lapply(files, read.csv, header = TRUE)
-  combined.df <- do.call(rbind , tables) 
+  combined.df <- do.call(rbind , tables)
+
+  numeric.only <- sapply(combined.df, is.numeric)
+  combined.df <- combined.df[ , numeric.only] # removes any non 'numeric' values
 
   ## Find column names for whole dataset
   names(combined.df)
@@ -109,7 +112,8 @@
     CurrentSampleCSV <- read.csv(File)
     CurrentSampleCSV
     
-    CurrentSampleCSV <- CurrentSampleCSV[ , colSums(is.na(CurrentSampleCSV)) == 0] # removes any columns containing 'NA's 
+    numeric.only <- sapply(CurrentSampleCSV, is.numeric) 
+    CurrentSampleCSV <- CurrentSampleCSV[ , numeric.only] # removes any non 'numeric' values
       
     # Modifications to the name are made here
     File <- gsub(" ", "_", File) # replaces empty spaces in the file name with '_'
