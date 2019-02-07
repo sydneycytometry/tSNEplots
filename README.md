@@ -10,7 +10,7 @@ This script accepts .csv files as input. A version to read straight from .fcs fi
 Go to 'releases' above (https://github.com/sydneycytometry/tSNEplots/releases) and download source code for the latest version. 
 
 ### Citation ###
-If you use this script in your work, please cite this github using the information below. You can cite the specific version that you used in your work (most recent version = v1.2.0).
+If you use this script in your work, please cite this github using the information below. You can cite the specific version that you used in your work.
 
 
 ### Version history ###
