@@ -41,11 +41,11 @@ If you use this script in your work, please cite this github using the informati
 
 *Year =						                2017*
 
-*Title =						              tSNEplots v1.2.0*
+*Title =						              tSNEplots v1.4.0*
 
 *Journal = 				                GitHub repository*
 
 *Publisher = 			                Github*
 
-*Website (copy the whole line) = 	DOI: http://doi.org/10.5281/zenodo.893859, repository: https://github.com/sydneycytometry/tSNEplots*
+*Website (copy the whole line) = 	DOI: TBC, repository: https://github.com/sydneycytometry/tSNEplots/releases*
 
