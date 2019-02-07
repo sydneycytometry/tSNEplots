@@ -15,6 +15,10 @@ If you use this script in your work, please cite this github using the informati
 
 ### Version history ###
 
+**v1.4** - updated main script and arranged some files
+
+*Ashhurst, T. M. (2019). tSNEplots v1.4. GitHub repository. DOI: TBC, repository: https://github.com/sydneycytometry/tSNEplots/releases.*
+
 **v1.3** - updated to ignore columns with non-numeric values
 
 *Ashhurst, T. M. (2017). tSNEplots v1.3. GitHub repository. DOI: TBC, repository: https://github.com/sydneycytometry/tSNEplots.*
