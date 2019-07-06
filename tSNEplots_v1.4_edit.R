@@ -24,22 +24,27 @@
   # Step 3: Run entire step, after modifying the names of the tSNE parameters
 
 
-##### STEP 1: Load packages and setup required for script #####
+##### STEP 1: Set up environment and Load packages #####
 
-  ## Will install packages (if not already installed)
-  if (!require("ggplot2")){install.packages("ggplot2")} # for plotting tSNE graphs
-  if (!require("colorRamps")){install.packages("colorRamps")} # for colour scheme management
-  if (!require("ggthemes")){install.packages("ggthemes")} # for plot themes
-  if (!require("scales")){install.packages("scales")} # for re-scaling if necessary
+# Environment Set up
+rm(list = ls()) # Clean workspace
+cat("\014")     # Clean Console
+gc() # Clean memory
 
-  ## Load packages
-  library(ggplot2) # for plotting tSNE graphs
-  library(colorRamps) # for colour scheme management
-  library(ggthemes) # for plot themes
-  library(scales) # for re-scaling, only if necessary
+# Install and load required packages
+pkgs <- c("rstudioapi", "ggplot2",  "colorRamps", "ggthemes", "scales")
 
-  ## Create 'jet' colour scheme (not available by default in R)
-  jet.colors <- colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"))
+for(i in 1:length(pkgs)){
+  if(!require(pkgs[i], character.only = T)){
+    install.packages(pkgs[i])
+    require(pkgs[i], character.only = T)
+  }else{
+    require(pkgs[i], character.only = T)
+  }
+}
+
+## Create 'jet' colour scheme (not available by default in R)
+jet.colors <- colorRampPalette(c("#00007F", "blue", "#007FFF", "cyan", "#7FFF7F", "yellow", "#FF7F00", "red", "#7F0000"))
 
 
 ##### STEP 2a: USER INPUT #####
@@ -51,6 +56,7 @@
   PrimaryDirectory <- getwd()
   PrimaryDirectory
   
+  ## Manual setting of working directory
   ## Set your working directory here (e.g. "/Users/Tom/Desktop/")
       #setwd("/Users/Tom/Desktop/sample_data") 
       #getwd()   # Check your working directory has changed correctly
@@ -61,12 +67,15 @@
   FileNames <- list.files(path=PrimaryDirectory, pattern = ".csv")
   FileNames
 
-  ## Enter the name of your first sample in between the "", and to check the tSNE parameter names (could be bhSNE, bh.SNE, vSNE, tSNE, etc)
-  names(read.csv(FileNames[1]))
-  
-  ## In the output of the previous line, you will see the names for the tSNE parameters -- insert them in between the "" below
-  plotXname <- "tSNE1"
-  plotYname <- "tSNE2"
+  # Define tSNE x and y
+  Col.logic <- grepl("tSNE", names(read.csv(FileNames[1])))
+  plotXname <- names(read.csv(FileNames[1]))[Col.logic][1]
+  plotYname <- names(read.csv(FileNames[1]))[Col.logic][2]
+
+  ## Use below code to manually select tSNE columns
+  #names(read.csv(FileNames[1]))
+  #plotXname <- "tSNE1"
+  #plotYname <- "tSNE2"
 
   
 ########### END USER INPUT ########### 
