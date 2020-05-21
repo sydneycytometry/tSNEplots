@@ -7,21 +7,23 @@ There are two versions of this script. In the main script (tSNEplots.R), the col
 This script accepts .csv files as input. A version to read straight from .fcs files will follow soon.
 
 ### How to download ###
-Go to 'releases' above (https://github.com/sydneycytometry/tSNEplots/releases) and download source code for the latest version. 
+Go to 'releases' above (https://github.com/sydneycytometry/tSNEplots/releases) and download source code for the latest version. There is a PDF with some visual instructions, along with comments in the code to guide you.
 
 ### Citation ###
-If you use this script in your work, please cite this github using the information below. You can cite the specific version that you used in your work.
+If you use this script in your work, please citing: Ashhurst, T. M., et al (2019). Analysis of the Murine Bone Marrow Hematopoietic System Using Mass and Flow Cytometry. Mass Cytometry: Methods and Protocols (pages 159-192). The paper is available here: https://www.ncbi.nlm.nih.gov/pubmed/31077106.
+
+You can also refer to the github repository in your methods section using information below. You can use the specific version that you used in your work.
 
 
 ### Version history ###
 
 **v1.4** - updated main script and arranged some files
 
-*Ashhurst, T. M. (2017). tSNEplots v1.4. GitHub repository. DOI: TBC, repository: https://github.com/sydneycytometry/tSNEplots/releases.*
+*Ashhurst, T. M. (2017). tSNEplots v1.4. GitHub repository. Repository: https://github.com/sydneycytometry/tSNEplots/releases.*
 
 **v1.3** - updated to ignore columns with non-numeric values
 
-*Ashhurst, T. M. (2017). tSNEplots v1.3. GitHub repository. DOI: TBC, repository: https://github.com/sydneycytometry/tSNEplots.*
+*Ashhurst, T. M. (2017). tSNEplots v1.3. GitHub repository. Repository: https://github.com/sydneycytometry/tSNEplots.*
 
 **v1.2.0** - updated to include 'global' colour, X, and Y scaling (most recent)
 
@@ -30,22 +32,4 @@ If you use this script in your work, please cite this github using the informati
 **v1.1.0** - original script
 
 *Ashhurst, T. M. (2017). tSNEplots v1.1.0. GitHub repository. DOI: http://doi.org/10.5281/zenodo.851736, repository: https://github.com/sydneycytometry/tSNEplots.*
-
-
-### Citation in EndNote ###
-
-
-**In EndNote:** citaton can be stored as ‘Computer Program’ or ‘Webpage’.
-
-*Author =					                Ashhurst, Thomas Myles*
-
-*Year =						                2017*
-
-*Title =						              tSNEplots v1.4.0*
-
-*Journal = 				                GitHub repository*
-
-*Publisher = 			                Github*
-
-*Website (copy the whole line) = 	DOI: TBC, repository: https://github.com/sydneycytometry/tSNEplots/releases*
 
