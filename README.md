@@ -10,7 +10,7 @@ This script accepts .csv files as input. A version to read straight from .fcs fi
 Go to 'releases' above (https://github.com/sydneycytometry/tSNEplots/releases) and download source code for the latest version. There is a PDF with some visual instructions, along with comments in the code to guide you.
 
 ### Citation ###
-If you use this script in your work, please citing: Ashhurst, T. M., et al (2019). Analysis of the Murine Bone Marrow Hematopoietic System Using Mass and Flow Cytometry. Mass Cytometry: Methods and Protocols (pages 159-192). The paper is available here: https://www.ncbi.nlm.nih.gov/pubmed/31077106.
+If you use this script in your work, please citing: please consider citing [Ashhurst TM, Marsh-Wakefield F, Putri GH, et al. (2020). bioRxiv. 2020.10.22.349563](https://www.biorxiv.org/content/10.1101/2020.10.22.349563v1.abstract)
 
 You can also refer to the github repository in your methods section using information below. You can use the specific version that you used in your work.
 
